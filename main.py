@@ -86,9 +86,10 @@ def get_map():
     with open(r'work\tweet2map\ncr_boundary.geojson', 'r') as f:
         json_file = f.read()
     geojson = json.loads(json_file)
-    folium.GeoJson(geojson,
-                name='City Boundaries'
-                ).add_to(m)
+    folium.GeoJson(
+        geojson,
+        name='City Boundaries'
+    ).add_to(m)
     
     folium.LayerControl(position='topright').add_to(m)
     
