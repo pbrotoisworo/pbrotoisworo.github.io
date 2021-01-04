@@ -5,16 +5,16 @@
     <h5><em>Open-source traffic accident database for Metro Manila</em></h5>
 
     <p><br><strong>LATEST DATASET VERSION: December 20, 2020<br>CURRENT DATASET SIZE: 17,000~ INCIDENTS</strong></p>
-    <i class="fab fa-kaggle"></i><a href="https://www.kaggle.com/esparko/mmda-traffic-incident-data"> Download the dataset for free on Kaggle</a>
-    <p><br>Tweet2Map is a semi-automated process of getting traffic incident Tweets from the Metro Manila Development Authority (MMDA) and then parsing the information into a usable database. I will be building a database over time and sharing the output with everyone.<br>This will be updated every month unless otherwise stated. Remember to check this page for updates!</p>
+    <i class="fab fa-kaggle"></i><a href="https://www.kaggle.com/esparko/mmda-traffic-incident-data">  Download the dataset for free on Kaggle</a>
+    <br>
+    <i class="fab fa-github"></i><a href="https://github.com/pbrotoisworo/tweet2map"> Download the source code on Github</a>
+    <p><br>Tweet2Map is a semi-automated process of getting traffic incident Tweets from the Metro Manila Development Authority (MMDA) and then parsing the information into a usable database. I will be building a database over time and sharing the output with everyone.<br>The interactive map below shows the latest 1,000 incidents in the database. Check this page for updates!</p>
     <p><strong>Disclaimer:</strong> There may be some errors and some gaps related to the acquisition and parsing of the Twitter data but most of it should be accurate. Read more about MMDA Tweet2Map code on this blog post.</p>​
-    <p>For any questions regarding this database please contact me using the details here.</p>
+    <br>
     <center>
         <div class="tweet2mapMap">
-            <iframe class="get_map", src="/get_map" frameborder="0"></iframe>
+            <iframe class="get_map", src="work/incident_map" frameborder="0"></iframe>
         </div>
     </center>
-    <!-- <iframe class="get_map", src="/get_map", style='position: absolute; display: block;', frameBorder="0", width="800" height="500"></iframe> -->
-    <!-- <iframe class="get_map", src="/get_map", style='position: absolute; background: transparent; width: 100%; height:100%;'></iframe> -->
     {% endblock %}
 {% endblock %}

@@ -19,10 +19,6 @@ def publications():
 def tweet2map():
     return render_template('/work/tweet2map.html', title='Tweet2Map')
 
-@app.route('/about.html')
-def about():
-    return render_template('about.html', title='About')
-
 @app.route('/cv.html')
 def cv():
     return render_template('cv.html', title='CV')
@@ -31,11 +27,7 @@ def cv():
 def portfolio():
     return render_template('portfolio.html', title='CV')
 
-@app.route('/contact.html')
-def contact():
-    return render_template('contact.html', title='Contact')
-
-@app.route('/get_map.html')
+@app.route('/work/incident_map.html')
 def get_map():
     
     # Init folium map
@@ -64,7 +56,7 @@ def get_map():
         </head>
         <div>
             <h3>Tweet:</h3>
-            <blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr"> {} </a></p>&mdash; Official MMDA (@MMDA)<a href="{}">{}</a></blockquote>
+            <blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr"> {} </a></p>&mdash; Official MMDA (@MMDA)<a href="{}"> {}</a></blockquote>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         """.format(text, source, timestamp)
@@ -88,7 +80,7 @@ def get_map():
     geojson = json.loads(json_file)
     folium.GeoJson(
         geojson,
-        name='City Boundaries'
+        name='LGU Boundaries'
     ).add_to(m)
     
     folium.LayerControl(position='topright').add_to(m)
