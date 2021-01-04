@@ -27,8 +27,8 @@ def cv():
 def portfolio():
     return render_template('portfolio.html', title='CV')
 
-@app.route('/work/incident_map.html')
-def get_map():
+@app.route('/incident_map.html')
+def incident_map():
     
     # Init folium map
     mc = MarkerCluster(name='Incidents')
@@ -83,9 +83,11 @@ def get_map():
         name='LGU Boundaries'
     ).add_to(m)
     
+    # Add layer control
     folium.LayerControl(position='topright').add_to(m)
     
-    m.save(r'work\tweet2map\map.html')
+    # Save and render
+    m.save(r'work\tweet2map\incident_map.html')
     render_map = m._repr_html_()
     return render_map
 
