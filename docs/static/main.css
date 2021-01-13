@@ -2,6 +2,10 @@ body {
     background: #ffffff;
     color: #333333;
   }
+
+  .profile-subtitle {
+    color: #a6a6a6
+  }
   
   h1, h2, h3, h4, h5, h6 {
     color: #444444;
@@ -100,9 +104,10 @@ body {
     height: 100%;
   }
 
-  /* footer {
-    color: #333333;
-  } */
+  /* Animation */
+  :root {
+    --animate-delay: 0.5s;
+  }
 
   /* Font Awesome icons */
 
@@ -123,8 +128,32 @@ body {
     color: #7e7e7e;
   }
 
-  #home_div_left {
+  /* Profile CSS */
+
+  /* #ul-skills {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  } */
+
+  #div_visual {
+    border: 1px;
+    border-color: red;
+    border-style: dashed;
+  }
+
+  #profile_div_left {
     text-align: right;
+    border: 1px;
+    border-width: 2px;
+    border-color: red;
+  }
+
+  #profile_div_right {
+    text-align: left;
+    border: 1px;
+    border-width: 2px;
+    border-color: red;
   }
 
   /* For dropdown on hover in the navbar */
@@ -134,3 +163,26 @@ body {
     .navbar .nav-item:hover .dropdown-menu{ display: block; }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
   }	
+
+  .landing-text {
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  .landing-text-subtitle {
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }

@@ -1,9 +1,11 @@
 import folium
+from folium.plugins import HeatMap, MarkerCluster
+import json
 import pandas as pd
 
-def generate_map():
+def generate_incident_map():
     
-        # Init folium map
+    # Init folium map
     mc = MarkerCluster(name='Incidents')
     metro_coords = (14.599574, 121.059929)
     m = folium.Map(
@@ -56,8 +58,10 @@ def generate_map():
         name='LGU Boundaries'
     ).add_to(m)
     
+    # Add layer control
     folium.LayerControl(position='topright').add_to(m)
     
-    m.save(r'work\tweet2map\map.html')
+    # Save and render
+    m.save(r'work\tweet2map\incident_map.html')
     render_map = m._repr_html_()
     return render_map

@@ -19,13 +19,11 @@
 </head>
 <body>
     <header class="site-header">
-      
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/">panji brotoisworo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -47,9 +45,19 @@
           </ul>
         </div>
       </nav>
-
     </header>
-
+    
+    {% if 'index' in jumbotron %}
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid vertical-center" style="height: 40vh; background-image: url('static/img/jumbotron_bg.png'); text-align: center; vertical-align: center;">
+      <hr>
+      <div class="container">
+        <h1 class="landing-text" style="color: white">Panji Brotoisworo</h1>
+        <p class="landing-text-subtitle" style="color: white">Researcher/Python Developer</p>
+      </div>
+    </div>
+    {% endif %}
+    
     <!-- Body -->
     <main role="main" class="container">
       <div class="row">
