@@ -4,6 +4,10 @@ import json
 import pandas as pd
 
 def generate_incident_map():
+    """
+    Generate Tweet2Map webmap
+    """
+    
     
     # Init folium map
     mc = MarkerCluster(name='Incidents')
